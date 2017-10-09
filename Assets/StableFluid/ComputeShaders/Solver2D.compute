@@ -333,7 +333,7 @@ void ProjectStep2(uint2 id : SV_DispatchThreadID)
 
     if (id.x < w && id.y < h)
     {
-        for (int k = 0; k < 20; k++)
+        for (int k = 0; k < GS_ITERATE; k++)
         {
             prev[id] = float3(
                         (prev[id].y + prev[uint2(id.x - 1, id.y)].x + prev[uint2(id.x + 1, id.y)].x +

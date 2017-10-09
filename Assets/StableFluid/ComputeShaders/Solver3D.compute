@@ -405,7 +405,7 @@ void ProjectStep2(uint3 id : SV_DispatchThreadID)
 
     if (id.x < w && id.y < h && id.x < d)
     {
-        for (int k = 0; k < 20; k++)
+        for (int k = 0; k < GS_ITERATE; k++)
         {
             //prev[id].xを外圧∇pとして使用.
             prev[id] = float4(
